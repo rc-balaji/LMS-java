@@ -14,16 +14,16 @@ public class Helper {
 	public Book readBook() {
 		Book book = new Book();
 		Scanner in = new Scanner(System.in);
-		System.out.println("Enter ID : ");
+		System.out.print("Enter ID : ");
 		book.setId(in.nextInt());
-		System.out.println("Enter Price : ");
+		System.out.print("Enter Price : ");
 		book.setPrice((Float)in.nextFloat());
 		in.nextLine();
-		System.out.println("Enter Title : ");
+		System.out.print("Enter Title : ");
 		book.setTitle(in.nextLine());
-		System.out.println("Enter Author : ");
+		System.out.print("Enter Author : ");
 		book.setAuthor(in.nextLine());
-		System.out.println("Enter Publisher:");
+		System.out.print("Enter Publisher:");
 		book.setPublisher(in.nextLine());
 		return book;
 	}

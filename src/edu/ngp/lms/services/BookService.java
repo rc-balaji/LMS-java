@@ -20,8 +20,9 @@ public class BookService implements IBookService {
 		Book book = new Book();
 		for (Book bk : bookList) {
 			if (book.getId() == id)
+				System.out.println("Enter");
 				book = bk;
-			break;
+				break;
 		}
 		return book;
 	}
@@ -39,7 +40,7 @@ public class BookService implements IBookService {
 		for(int i=0;i<bookList.size();i++) {
 			if(bookList.get(i).getId() == id) {
 				bookList.remove(i);
-				return false;
+				return true;
 				
 				
 			}
