@@ -30,7 +30,7 @@ public class BookService implements IBookService {
 	@Override
 	public boolean update(Book book) {
 
-		bookList.add(bookList.indexOf(book),book);
+		bookList.add(bookList.indexOf(book.getId()),book);
 		return true;
 		
 	}
