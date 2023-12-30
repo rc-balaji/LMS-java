@@ -17,19 +17,34 @@ public class BookService implements IBookService {
 
 	@Override
 	public Book getBookId(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Book book = new Book();
+		for (Book bk : bookList) {
+			if (book.getId() == id)
+				book = bk;
+			break;
+		}
+		return book;
 	}
 
 	@Override
 	public boolean update(Book book) {
-		// TODO Auto-generated method stub
-		return false;
+
+		bookList.add(bookList.indexOf(book),book);
+		return true;
+		
 	}
 
 	@Override
 	public boolean delete(Integer id) {
-		// TODO Auto-generated method stub
+		for(int i=0;i<bookList.size();i++) {
+			if(bookList.get(i).getId() == id) {
+				bookList.remove(i);
+				return false;
+				
+				
+			}
+			
+		}
 		return false;
 	}
 
